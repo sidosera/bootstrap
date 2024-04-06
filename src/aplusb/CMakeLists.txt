@@ -1,5 +1,9 @@
-add_executable(
-    my
+add_library(
+    deep_thought
     deep_thought.hpp
-    tests.cpp
+    deep_thought.cpp
+    deep_thought_calculator_basic.hpp
+    deep_thought_calculator_basic.cpp
+    deep_thought_calculator_advanced.hpp
+    deep_thought_calculator_advanced.cpp
 )

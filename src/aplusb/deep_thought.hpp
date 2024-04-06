@@ -8,12 +8,9 @@ struct UltimateQuestion {};
 
 class DeepThought {
  public:
-  explicit DeepThought(std::unique_ptr<DeepThoughtCalculator> calculator)
-      : calculator_(std::move(calculator)){};
+  explicit DeepThought(std::unique_ptr<DeepThoughtCalculator> calculator);
 
-  int computeAnswer(UltimateQuestion) {
-    return calculator_->calculate();
-  }
+  int computeAnswer(UltimateQuestion);
 
  private:
   std::unique_ptr<DeepThoughtCalculator> calculator_;
