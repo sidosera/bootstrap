@@ -5,12 +5,12 @@ services:
     build:
       context: image
       dockerfile: Dockerfile
-    container_name: $CONTAINER_NAME
+    container_name: $CN
     cap_add:
       - SYS_PTRACE
     stdin_open: true
     tty: true
     volumes:
-      - $HOST_WORKSPACE_DIR:/workspace
+      - $WD:/workspace
     ports:
       - "127.0.0.1:3333:22"
